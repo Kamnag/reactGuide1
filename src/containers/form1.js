@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import * as ACTIONS from '../store/actions/actions';
 import { connect } from 'react-redux';
+import { Button, Input } from 'semantic-ui-react'
+
 
 
 
@@ -24,8 +26,8 @@ class Form1 extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label> Input </label>
-          <input id="name" onChange={this.handleChange} type="text" />
-          <button type="submit"> Submit </button>
+          <Input id="name" onChange={this.handleChange} type="text" />
+          <Button type="submit"> Submit </Button>
         </form>
         <br />
         <h3>React State:</h3>
