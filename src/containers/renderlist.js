@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { List } from 'semantic-ui-react'
 
 
 
@@ -19,13 +20,20 @@ class RenderList extends Component {
     return (
       <div>
       {this.state.items.map(list_item =>
-        <div key={list_item.id}>
-          <Link to={{pathname:'/listitem/' + list_item.id, state:{list_item} }} style={{marginTop: '25px', padding: '5px'}}>
+      <List>
+      <List.Item>
+        <Link to={{pathname:'/listitem/' + list_item.id, state:{list_item} }} style={{marginTop: '25px', padding: '5px'}}>
             List Item {list_item.id}
-          </Link>
-          <br />
-          <br />
-        </div>
+           </Link>
+           </List.Item>
+      </List>
+        // <div key={list_item.id}>
+        //   <Link to={{pathname:'/listitem/' + list_item.id, state:{list_item} }} style={{marginTop: '25px', padding: '5px'}}>
+        //     List Item {list_item.id}
+        //   </Link>
+        //   <br />
+        //   <br />
+        // </div>
         )}
       </div>
     )}
