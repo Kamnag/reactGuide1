@@ -45,7 +45,7 @@ const App = () => {
 
     return(
       <div>
-      React
+      
       <Context.Provider
           value={{
             userReducer1State: stateReducer1.stateprop2,
